@@ -5,7 +5,10 @@ mod structs;
 mod day02;
 mod day03;
 mod error_handle;
-
+mod review324;
+mod traits;
+mod life;
+mod day04;
 
 fn main() {
    //types::show_type();
@@ -17,4 +20,9 @@ fn main() {
    day03::call_str();
    day03::day::test_hash();
    error_handle::call_error();
+   let config = day04::Config{
+      path:String::from("test.txt"),
+      key:String::from("hello"),
+   };
+   day04::grep(&config);
 }
