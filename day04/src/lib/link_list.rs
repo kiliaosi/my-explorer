@@ -28,16 +28,16 @@ trait Formats{
   fn stringify(&self)->String;
 }
 
-impl <T:Display> Formats for Node<T>{
-  fn stringify(&self)->String{
+impl <T:fmt::Display>  Node<T>{
+  pub fn stringify(&self)->String{
     match self {
-        Cons(ele, ref top) => format!("{}<-{}", ele, top.stringify()),
+        Cons(ele, ref top) => format!("{}->{}", ele, top.stringify()),
         Nil => format!("Nil"),
     }
   }
 }
 
-pub struct Mode(i32);
+pub struct Mode(pub i32);
 impl fmt::Display for Mode{
   fn fmt(&self,f: &mut fmt::Formatter)->fmt::Result{
     write!(f, "{}",self.0)
