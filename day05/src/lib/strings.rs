@@ -19,6 +19,7 @@ impl FromStr for FmtString{
    let coord:Vec<&str> =  s.trim_matches(|strs|strs=='{' || strs=='}' || strs==' ')
                            .split(",")
                            .collect();
+    
   }
 }
 

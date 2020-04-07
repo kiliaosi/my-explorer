@@ -21,4 +21,24 @@ fn main(){
   let test = preview::Test3::from_str("{100}").unwrap();
   println!("{:?}",&test);
   println!("{}", test.to_string());
+  // lib::statement::loops();
+  // lib::statement::fors();
+
+  //解构
+
+  let number = &100;
+  match number{
+     &val =>{
+      println!("{:?}",val);
+    }
+  }
+  
+  struct Mode{
+    value:i32,
+  }
+  let test_some = Mode{
+    value:90,
+  };
+  let Mode { value } = test_some;
+  println!("{}",value);
 }
