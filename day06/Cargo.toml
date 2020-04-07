@@ -1,0 +1,11 @@
+[package]
+name="day06"
+version = "0.1.0"
+authors = ["kiliaosi <'wangkiliaosi@foxmail.com'>"]
+edition = "2018"
+
+[lib]
+name="lib"
+path="./src/lib/mod.rs"
+
+[dependencies]
