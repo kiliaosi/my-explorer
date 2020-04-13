@@ -41,4 +41,13 @@ fn main(){
   };
   let Mode { value } = test_some;
   println!("{}",value);
+
+  //守卫
+  const tuple:(i32,i32) = (1,2);
+  match tuple{
+    (a, b) if a+b==3=>println!("{}",a+b),
+    _=>println!("not matched"),
+  }
+
+  lib::close::test();
 }
