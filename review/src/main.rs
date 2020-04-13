@@ -26,7 +26,21 @@ impl <'a> Test<i32> for Info<'a>{
     }
 }
 
+//迭代器
+struct Node{
+  value:i32,
+}
 
+impl Iterator for Node{
+  type Item = i32;
+  fn next(&mut self)->Option<Self::Item>{
+    if(self.value>=5){
+      return None
+    }
+    self.value+=1;
+    Some(self.value)
+  }
+}
 fn main() {
     let x = vec![1,2,3,4,5];
     
