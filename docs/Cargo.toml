@@ -1,5 +1,5 @@
 [package]
-name = "review"
+name = "docs"
 version = "0.1.0"
 authors = ["kiliaosi <'wangkiliaosi@foxmail.com'>"]
 edition = "2018"
