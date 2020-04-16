@@ -26,3 +26,5 @@ impl GetName for Org{
       &self.name
   }
 }
+
+impl <> 
